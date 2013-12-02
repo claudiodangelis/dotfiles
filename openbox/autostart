@@ -1,0 +1,5 @@
+#!/bin/bash
+exec /home/dawson/.screenlayout/screenlayout.sh &
+kupfer --no-splash &
+xdotool mousemove 2500 500 &
+
