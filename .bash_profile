@@ -99,6 +99,3 @@ set completion-ignore-case on
 #	Random stuff
 export HISTSIZE=9999
 
-if [[ ! $TERM =~ screen  ]]; then
-    exec tmux
-fi

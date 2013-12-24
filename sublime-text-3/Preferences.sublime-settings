@@ -1,7 +1,9 @@
 {
+	"color_scheme": "Packages/Oblivion Color Scheme/Oblivion.tmTheme",
 	"dartsdk_path": "/home/dawson/dart/dart-sdk",
-	"font_face": "Inconsolata",
-	"font_size": 13,
+	"font_face": "Droid Sans Mono",
+	"font_size": 12,
+	"highlight_line": true,
 	"hot_exit": false,
 	"ignored_packages":
 	[

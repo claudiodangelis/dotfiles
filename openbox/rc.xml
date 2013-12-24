@@ -178,6 +178,11 @@
     <keybind key="C-A-Left">
       <action name="DesktopPrevious"/>
     </keybind>
+    <keybind key="C-A-W-Return">
+      <action name="Execute">
+        <command>/home/dawson/bin/backup_on_logout</command>
+      </action>
+    </keybind>
     <keybind key="XF86AudioRaiseVolume">
       <action name="Execute">
         <command>amixer set Master 3+</command>
