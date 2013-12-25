@@ -1,9 +1,8 @@
 XTerm*faceName: Droid Sans Mono:size=11
-
+xterm*vt100*geometry: 85x50
 ! X cursor
 Xcursor.theme: Vanilla-DMZ
 ! Xcursor.size: 16
-
 
 ! XFT and Font settings
 Xft*dpi:       96
