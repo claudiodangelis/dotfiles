@@ -160,7 +160,7 @@
     <!-- (Top|Bottom)(Left|Right|)|Top|Bottom|Left|Right|Floating -->
     <floatingX>0</floatingX>
     <floatingY>0</floatingY>
-    <noStrut>no</noStrut>
+    <noStrut>yes</noStrut>
     <stacking>Above</stacking>
     <!-- 'Above', 'Normal', or 'Below' -->
     <direction>Vertical</direction>
@@ -178,6 +178,11 @@
     <keybind key="C-A-Left">
       <action name="DesktopPrevious"/>
     </keybind>
+    <keybind key="W-space">
+      <action name="Execute">
+        <command>xterm -geometry 64x1+500+500 -e &quot;zsh -c 'echo -en \&quot;\e]0;$(date)\a\&quot;; zsh -i'&quot;</command>
+      </action>
+    </keybind>
     <keybind key="C-A-W-Return">
       <action name="Execute">
         <command>/home/dawson/bin/backup_on_logout</command>
@@ -193,24 +198,75 @@
         <command>amixer set Master 3-</command>
       </action>
     </keybind>
-    <keybind key="C-A-W-Left">
+    <keybind key="C-A-Right">
+      <action name="DesktopNext"/>
+    </keybind>
+    <keybind key="W-KP_1">
       <action name="MoveResizeTo">
         <x>0</x>
-        <y>0</y>
+        <y>50%</y>
         <width>50%</width>
+        <height>50%</height>
       </action>
-      <action name="ToggleMaximizeVert"/>
     </keybind>
-    <keybind key="C-A-W-Right">
+    <keybind key="W-KP_2">
+      <action name="MoveResizeTo">
+        <x>0</x>
+        <y>50%</y>
+        <width>100%</width>
+        <height>50%</height>
+      </action>
+    </keybind>
+    <keybind key="W-KP_3">
       <action name="MoveResizeTo">
         <x>50%</x>
         <y>50%</y>
         <width>50%</width>
+        <height>50%</height>
       </action>
-      <action name="ToggleMaximizeVert"/>
     </keybind>
-    <keybind key="C-A-Right">
-      <action name="DesktopNext"/>
+    <keybind key="W-KP_4">
+      <action name="MoveResizeTo">
+        <x>0</x>
+        <y>0</y>
+        <width>50%</width>
+        <height>100%</height>
+      </action>
+    </keybind>
+    <keybind key="W-KP_5">
+      <action name="ToggleMaximizeFull"/>
+    </keybind>
+    <keybind key="W-KP_6">
+      <action name="MoveResizeTo">
+        <x>50%</x>
+        <y>0</y>
+        <width>50%</width>
+        <height>100%</height>
+      </action>
+    </keybind>
+    <keybind key="W-KP_7">
+      <action name="MoveResizeTo">
+        <x>0</x>
+        <y>0</y>
+        <width>50%</width>
+        <height>50%</height>
+      </action>
+    </keybind>
+    <keybind key="W-KP_8">
+      <action name="MoveResizeTo">
+        <x>0</x>
+        <y>0</y>
+        <width>100%</width>
+        <height>50%</height>
+      </action>
+    </keybind>
+    <keybind key="W-KP_9">
+      <action name="MoveResizeTo">
+        <x>50%</x>
+        <y>0</y>
+        <width>50%</width>
+        <height>50%</height>
+      </action>
     </keybind>
     <keybind key="C-W-Left">
       <action name="SendToDesktopPrevious"/>
@@ -226,20 +282,19 @@
     <keybind key="C-A-D">
       <action name="ToggleShowDesktop"/>
     </keybind>
-    <keybind key="C-A-W-Up">
-      <action name="ToggleMaximizeFull"/>
-    </keybind>
-    <keybind key="C-A-W-Down">
-      <action name="Iconify"/>
-    </keybind>
     <keybind key="W-x">
       <action name="Execute">
         <command>xterm</command>
       </action>
     </keybind>
+    <keybind key="W-f">
+      <action name="Execute">
+        <command>thunar</command>
+      </action>
+    </keybind>
     <keybind key="W-w">
       <action name="Execute">
-        <command>chromium</command>
+        <command>firefox</command>
       </action>
     </keybind>
     <keybind key="W-e">
