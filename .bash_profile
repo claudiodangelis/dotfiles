@@ -1,5 +1,5 @@
-export PATH="$PATH:~/dart/dart-sdk/bin:/opt/local/bin:/opt/local/sbin:~/bin:~/.gem/ruby/2.0.0/bin"
-export DART_SDK=~/dart/dart-sdk
+export PATH="$PATH:/home/dawson/dart/dart-sdk/bin:/opt/local/bin:/opt/local/sbin:~/bin:~/.gem/ruby/2.0.0/bin:/opt/android-sdk:/opt/android-sdk/tools:/opt/android-sdk/platform-tools"
+export DART_SDK=/home/dawson/dart/dart-sdk
 
 # Aliases
 alias ..='cd ..'
@@ -35,7 +35,6 @@ function ff(){
 
 function server(){
   local port="${1:-8000}"
-  xdg-open "http://localhost:${port}/" &
   python -m http.server "$port"
 }
 
@@ -86,6 +85,12 @@ category: $POST_CATEGORY
 
 }
 
+=() {
+    calc="${@//p/+}"
+    calc="${calc//x/*}"
+    bc -l <<<"scale=10;$calc"
+}
+
 # Misc
 function parse_git_branch {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
@@ -99,3 +104,5 @@ set completion-ignore-case on
 #	Random stuff
 export HISTSIZE=9999
 
+
+[[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh # This loads NVM

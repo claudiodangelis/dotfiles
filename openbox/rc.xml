@@ -179,9 +179,9 @@
       <action name="DesktopPrevious"/>
     </keybind>
     <keybind key="W-space">
-      <action name="Execute">
-        <command>xterm -geometry 64x1+500+500 -e &quot;zsh -c 'echo -en \&quot;\e]0;$(date)\a\&quot;; zsh -i'&quot;</command>
-      </action>
+        <action name="Execute">
+            <command>bashrun2 toggle</command>
+        </action>
     </keybind>
     <keybind key="C-A-W-Return">
       <action name="Execute">
