@@ -114,5 +114,6 @@ set completion-ignore-case on
 #	Random stuff
 export HISTSIZE=9999
 
+source /home/dawson/me/dev/github/claudiodangelis/dart_cli_utils/dart_cli_utils
 
 [[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh # This loads NVM
