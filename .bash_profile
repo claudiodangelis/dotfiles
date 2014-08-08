@@ -44,8 +44,13 @@ function ff(){
 }
 
 function server(){
-  local port="${1:-8000}"
-  python -m http.server "$port"
+    if [ $1 -eq $1 ] 2>/dev/null && ! [ -z "$1" ]; then
+        PORT="--port $1"
+    else
+        PORT=""
+    fi
+    
+    pub global run simple_http_server $PORT
 }
 
 function engeene(){
