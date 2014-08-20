@@ -1,6 +1,8 @@
 export PATH="$PATH:/home/dawson/dart/dart-sdk/bin:/opt/local/bin:/opt/local/sbin:~/bin:~/.gem/ruby/2.0.0/bin:/opt/android-sdk:/opt/android-sdk/tools:/opt/android-sdk/platform-tools"
 export DART_SDK=/home/dawson/dart/dart-sdk
 
+. ~/.z.sh
+
 # Aliases
 alias ..='cd ..'
 alias ls='ls -Ah --color'
