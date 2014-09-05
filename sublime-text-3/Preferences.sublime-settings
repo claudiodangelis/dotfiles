@@ -1,20 +1,22 @@
 {
-	"color_scheme": "Packages/Oblivion Color Scheme/Oblivion.tmTheme",
+	"color_scheme": "Packages/User/NightLion DL.tmTheme",
 	"dartsdk_path": "/home/dawson/dart/dart-sdk",
-	"font_face": "Droid Sans Mono",
-	"font_size": 12,
+	"font_size": 10,
 	"highlight_line": true,
 	"hot_exit": false,
 	"ignored_packages":
 	[
+		"Oblivion Color Scheme",
 		"Vintage"
 	],
 	"remember_open_files": false,
 	"rulers":
 	[
-		80
+		80,
+		120
 	],
 	"tab_size": 4,
 	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": true,
 	"word_wrap": false
 }
