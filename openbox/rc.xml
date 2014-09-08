@@ -302,6 +302,11 @@
         <command>dart-editor</command>
       </action>
     </keybind>
+    <keybind key="W-m">
+        <action name="Execute">
+            <command>chromium --app-id=pjkljhegncpnkpknbcohdijeoejaedia</command>
+        </action>
+    </keybind>
     <keybind key="W-t">
         <action name="Execute">
             <command>chromium --app-id=oflhioojkbelepjlnafgmgkkjhojphcg</command>
