@@ -299,7 +299,7 @@
     </keybind>
     <keybind key="W-e">
       <action name="Execute">
-        <command>/home/dawson/dart/DartEditor</command>
+        <command>dart-editor</command>
       </action>
     </keybind>
     <keybind key="W-s">
