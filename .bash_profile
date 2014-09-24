@@ -12,7 +12,7 @@ alias subl='/opt/sublime_text_3/sublime_text'
 
 # Functions
 screencast() {
-    recordmydesktop --workdir=~/tmp --width 1680 --height 1050
+    recordmydesktop --width 1680 --height 1050 --workdir ~/tmp
     echo "Splitting audio and video"
     avconv -i out.ogv -vcodec libx264 -an tmpvid.mov
     echo "Extracting audio (for noise reduction processing)"
