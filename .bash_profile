@@ -11,6 +11,26 @@ alias ll='l | less'
 alias subl='/opt/sublime_text_3/sublime_text'
 
 # Functions
+screencast() {
+    recordmydesktop --workdir=~/tmp --width 1680 --height 1050
+    echo "Splitting audio and video"
+    avconv -i out.ogv -vcodec libx264 -an tmpvid.mov
+    echo "Extracting audio (for noise reduction processing)"
+    avconv -i out.ogv tmpaud.wav
+    echo "Sampling noise"
+    avconv -i out.ogv -vn -ss 00:00:00 -t 00:00:01 noiseaud.wav
+    echo "Profiling noise"
+    sox noiseaud.wav -n noiseprof noise.prof
+    echo "Applying actual noise reduction"
+    sox tmpaud.wav tmpaud-clean.wav noisered noise.prof 0.185
+    echo "Merging audio and video again"
+    avconv -i tmpvid.mov -i tmpaud-clean.wav -strict experimental final.mov
+    echo "Cleaning temp files"
+    rm tmpvid.mov tmpaud.wav noiseaud.wav noise.prof
+    echo "Backup original .ogv"
+    mv out.ogv out_original.ogv
+}
+
 function dart_clean()
 {
     # Removes all pubspec.lock
