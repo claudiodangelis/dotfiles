@@ -7,7 +7,7 @@ export DART_SDK=/home/dawson/dart/dart-sdk
 alias ..='cd ..'
 alias ls='ls -Ah --color'
 alias l='ls -lAh --color'
-alias ll='l | less'
+alias ll='l | less -r'
 alias subl='/opt/sublime_text_3/sublime_text'
 
 # Functions
