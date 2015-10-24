@@ -1,47 +1,25 @@
 :syntax on
+set t_Co=256
 set tabstop=4
 set shiftwidth=4
 set expandtab
-map <F2> <Esc> :tabp <CR>
-map <F12> <Esc> :tabn <CR>
-autocmd FileType html :AcpDisable
-
-highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-fun! UpdateMatch()
-    if &ft !~ '^\%(html\|xml\)$'
-        match OverLength /\%81v.*/
-    else
-        match NONE
-    endif
-endfun
-autocmd BufEnter,BufWinEnter * call UpdateMatch()
-function! s:swap_lines(n1, n2)
-    let line1 = getline(a:n1)
-    let line2 = getline(a:n2)
-    call setline(a:n1, line2)
-    call setline(a:n2, line1)
+set autoindent
+colorscheme monokai
+execute pathogen#infect()
+highlight clear SignColumn
+set cc=81
+highlight ColorColumn ctermbg=0
+autocmd BufWritePre * call CleanWhitespaceEmptyLines()
+map <C-K> :GitGutterPrevHunk<CR>
+map <C-J> :GitGutterNextHunk<CR>
+set nowrap
+set term=xterm-256color
+let g:dart_style_guide = 1
+if has('vim_starting')
+  set nocompatible
+  set runtimepath+=~/.vim/bundle/dart-vim-plugin
+endif
+filetype plugin indent on
+function CleanWhitespaceEmptyLines()
+    :%s/\s\+$//e
 endfunction
-
-function! s:swap_up()
-    let n = line('.')
-    if n == 1
-        return
-    endif
-
-    call s:swap_lines(n, n - 1)
-    exec n - 1
-endfunction
-
-function! s:swap_down()
-    let n = line('.')
-    if n == line('$')
-        return
-    endif
-
-    call s:swap_lines(n, n + 1)
-    exec n + 1
-endfunction
-
-noremap <silent> <a-up> :call <SID>swap_up()<CR>
-noremap <silent> <a-down> :call <SID>swap_down()<CR>
-

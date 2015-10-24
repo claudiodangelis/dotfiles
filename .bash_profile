@@ -1,5 +1,6 @@
-export PATH="$PATH:/home/dawson/dart/dart-sdk/bin:/opt/local/bin:/opt/local/sbin:~/bin:~/.gem/ruby/2.0.0/bin:/opt/android-sdk:/opt/android-sdk/tools:/opt/android-sdk/platform-tools"
 export DART_SDK=/home/dawson/dart/dart-sdk
+export PATH="$PATH:/home/dawson/dart/dart-sdk/bin:/opt/local/bin:/opt/local/sbin:~/bin:~/.gem/ruby/2.0.0/bin:/opt/android-sdk:/opt/android-sdk/tools:/opt/android-sdk/platform-tools:~/.gem/ruby/2.2.0/bin:~/sorgenti/toggl/toggldesktop"
+
 
 . ~/.z.sh
 
@@ -8,7 +9,12 @@ alias ..='cd ..'
 alias ls='ls -Ah --color'
 alias l='ls -lAh --color'
 alias ll='l | less -r'
-alias subl='/opt/sublime_text_3/sublime_text'
+alias subl='/opt/sublime_text_3/sublime_text --command toggle_full_screen'
+alias pp='mplayer *'
+alias xx='vim -c 'startinsert' /tmp/NOTES'
+alias quickcommit='git add . && git commit --verbose'
+# addon-sdk alias
+alias addon-sdk="cd /opt/addon-sdk && source bin/activate; cd -"
 
 # Functions
 screencast() {
@@ -30,6 +36,7 @@ screencast() {
     echo "Backup original .ogv"
     mv out.ogv out_original.ogv
 }
+
 
 function dart_clean()
 {
@@ -55,7 +62,7 @@ function ffind(){
   find . -iname "*$findArgs"
   unset findArgs
 }
- 
+
 function ff(){
   for ARG in "$@"
   do
@@ -66,13 +73,8 @@ function ff(){
 }
 
 function server(){
-    if [ $1 -eq $1 ] 2>/dev/null && ! [ -z "$1" ]; then
-        PORT="--port $1"
-    else
-        PORT=""
-    fi
-    
-    pub global run simple_http_server $PORT
+  local port="${1:-8000}"
+  python -m http.server "$port"
 }
 
 function engeene(){

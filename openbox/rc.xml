@@ -179,21 +179,30 @@
       <action name="DesktopPrevious"/>
     </keybind>
     <keybind key="W-space">
-        <action name="Execute">
-            <command>bashrun2 toggle</command>
-        </action>
+      <action name="Execute">
+        <command>bashrun2 toggle</command>
+      </action>
     </keybind>
-    <keybind key="C-A-W-Return">
+    <keybind key="C-A-W-Down">
+      <action name="Iconify"/>
+    </keybind>
+    <keybind key="C-A-W-5">
+      <!-- mark -->
+      <action name="GrowToFill">
+        <direction>west</direction>
+      </action>
+    </keybind>
+    <keybind key="C-A-W-Delete">
       <action name="Execute">
         <command>/home/dawson/bin/backup_on_logout</command>
       </action>
     </keybind>
-    <keybind key="XF86AudioRaiseVolume">
+    <keybind key="C-F12">
       <action name="Execute">
         <command>amixer -c 0 set Master 3+</command>
       </action>
     </keybind>
-    <keybind key="XF86AudioLowerVolume">
+    <keybind key="C-F11">
       <action name="Execute">
         <command>amixer -c 0 set Master 3-</command>
       </action>
@@ -201,7 +210,7 @@
     <keybind key="C-A-Right">
       <action name="DesktopNext"/>
     </keybind>
-    <keybind key="W-KP_1">
+    <keybind key="W-1">
       <action name="MoveResizeTo">
         <x>0</x>
         <y>50%</y>
@@ -209,7 +218,7 @@
         <height>50%</height>
       </action>
     </keybind>
-    <keybind key="W-KP_2">
+    <keybind key="W-2">
       <action name="MoveResizeTo">
         <x>0</x>
         <y>50%</y>
@@ -217,7 +226,7 @@
         <height>50%</height>
       </action>
     </keybind>
-    <keybind key="W-KP_3">
+    <keybind key="W-3">
       <action name="MoveResizeTo">
         <x>50%</x>
         <y>50%</y>
@@ -225,7 +234,7 @@
         <height>50%</height>
       </action>
     </keybind>
-    <keybind key="W-KP_4">
+    <keybind key="W-4">
       <action name="MoveResizeTo">
         <x>0</x>
         <y>0</y>
@@ -233,10 +242,10 @@
         <height>100%</height>
       </action>
     </keybind>
-    <keybind key="W-KP_5">
+    <keybind key="W-5">
       <action name="ToggleMaximizeFull"/>
     </keybind>
-    <keybind key="W-KP_6">
+    <keybind key="W-6">
       <action name="MoveResizeTo">
         <x>50%</x>
         <y>0</y>
@@ -244,7 +253,7 @@
         <height>100%</height>
       </action>
     </keybind>
-    <keybind key="W-KP_7">
+    <keybind key="W-7">
       <action name="MoveResizeTo">
         <x>0</x>
         <y>0</y>
@@ -252,7 +261,7 @@
         <height>50%</height>
       </action>
     </keybind>
-    <keybind key="W-KP_8">
+    <keybind key="W-8">
       <action name="MoveResizeTo">
         <x>0</x>
         <y>0</y>
@@ -260,7 +269,7 @@
         <height>50%</height>
       </action>
     </keybind>
-    <keybind key="W-KP_9">
+    <keybind key="W-9">
       <action name="MoveResizeTo">
         <x>50%</x>
         <y>0</y>
@@ -287,6 +296,26 @@
         <command>xterm</command>
       </action>
     </keybind>
+    <keybind key="W-i">
+      <action name="Execute">
+        <command>xterm -e "ping www.google.com"</command>
+      </action>
+    </keybind>
+    <keybind key="W-y">
+      <action name="Execute">
+        <command>skype</command>
+      </action>
+    </keybind>
+    <keybind key="W-u">
+      <action name="Execute">
+        <command>upwork</command>
+      </action>
+    </keybind>
+    <keybind key="W-p">
+      <action name="Execute">
+        <command>selfhosted-screenshots.sh</command>
+      </action>
+    </keybind>
     <keybind key="W-f">
       <action name="Execute">
         <command>thunar</command>
@@ -297,25 +326,40 @@
         <command>chromium</command>
       </action>
     </keybind>
+    <keybind key="W-0">
+      <action name="Execute">
+          <command>/home/dawson/bin/close_idle_terminals</command>
+      </action>
+    </keybind>
     <keybind key="W-e">
       <action name="Execute">
-        <command>dart-editor</command>
+        <command>/home/dawson/dart/DartEditor</command>
       </action>
     </keybind>
     <keybind key="W-c">
-        <action name="Execute">
-            <command>chromium --app-id=ejjicmeblgpmajnghnpcppodonldlgfn</command>
-        </action>
+      <action name="Execute">
+        <command>chromium --app-id=ejjicmeblgpmajnghnpcppodonldlgfn</command>
+      </action>
     </keybind>
     <keybind key="W-m">
-        <action name="Execute">
-            <command>chromium --app-id=pjkljhegncpnkpknbcohdijeoejaedia</command>
-        </action>
+      <action name="Execute">
+        <command>chromium --app-id=pjkljhegncpnkpknbcohdijeoejaedia</command>
+      </action>
     </keybind>
     <keybind key="W-t">
-        <action name="Execute">
-            <command>chromium --app-id=oflhioojkbelepjlnafgmgkkjhojphcg</command>
-        </action>
+      <action name="Execute">
+        <command>chromium --app-id=oflhioojkbelepjlnafgmgkkjhojphcg</command>
+      </action>
+    </keybind>
+    <keybind key="W-g">
+      <action name="Execute">
+        <command>chromium --app-id=cgidfjilcpmpgknehdfjbcmpmgjokpbh</command>
+      </action>
+    </keybind>
+    <keybind key="W-h">
+      <action name="Execute">
+        <command>chromium --app-id=knipolnnllmklapflnccelgolnpehhpl</command>
+      </action>
     </keybind>
     <keybind key="W-s">
       <action name="Execute">
@@ -324,7 +368,7 @@
     </keybind>
     <keybind key="W-a">
       <action name="Execute">
-        <command>atom</command>
+        <command>chromium --app-id=bgjohebimpjdhhocbknplfelpmdhifhd</command>
       </action>
     </keybind>
     <keybind key="C-A-W-Home">
@@ -372,7 +416,10 @@
       <action name="GoToDesktop"/>
     </keybind>
     <keybind key="W-d">
-      <action name="ToggleShowDesktop"/>
+      <action name="Execute">
+        <command>chromium --app-id=apdfllckaahabafndbhieahigkjlhalf</command>
+      </action>
+
     </keybind>
     <keybind key="A-F4">
       <action name="Close"/>
@@ -786,6 +833,15 @@
     <!-- show the manage desktops section in the client-list-(combined-)menu -->
   </menu>
   <applications>
+    <application name="sublime_text">
+      <decor>no</decor>
+    </application>
+    <application name="sun-awt-X11-XFramePeer">
+      <decor>no</decor>
+    </application>
+    <application name="atom">
+      <decor>no</decor>
+    </application>
     <!--
   # this is an example with comments through out. use these to make your
   # own rules, but without the comments of course.
