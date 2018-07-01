@@ -1,5 +1,0 @@
-#!/bin/bash
-# parcellite &
-exec /home/dawson/.screenlayout/screenlayout.sh &
-xset dpms force off &
-
