@@ -1,4 +1,1 @@
-dotfiles
-========
-
-dotfiles: unix geeks' selfies
+My dotfiles.
