@@ -1,1 +1,15 @@
-My dotfiles.
+# dotfiles
+
+Collection of dotfiles and command line utilities.
+
+## dotfiles
+dotfiles:
+- .aliases
+- .env
+
+dotfiles are loaded from ".dotfiles" source.
+
+## configuration files
+
+### vim
+- copy .vimrc into the home directory
