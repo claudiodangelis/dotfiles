@@ -20,3 +20,4 @@ echo "- dotfiles installed"
 # Install dependencies and tools
 # z.sh
 # hstr
+

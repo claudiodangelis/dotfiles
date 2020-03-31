@@ -1,1 +1,4 @@
 alias ..='cd ..'
+alias v=vim
+alias c=code
+alias l='ls -la'
