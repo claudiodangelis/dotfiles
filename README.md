@@ -4,6 +4,7 @@ Collection of dotfiles and command line utilities.
 
 ## dotfiles
 dotfiles:
+- .functions
 - .aliases
 - .env
 

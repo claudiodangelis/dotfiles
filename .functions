@@ -1,0 +1,17 @@
+#!/bin/bash
+
+## git utility functions to use in PS1 prompt
+
+# Get the name of the current git branch
+function parse_git_branch {
+  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+}
+# If the current branch is not merged, print an exclamation mark (!)
+function parse_git_branch_no_merged {
+    [[ $(git branch --no-merged 2> /dev/null) != "" ]] && echo "!" || echo ""
+}
+
+# If the current branch contains uncommitted changes, print a wildcard (*)
+function parse_git_status {
+    [[ $(git status --porcelain 2> /dev/null) != "" ]] && echo "*" || echo ""
+}
