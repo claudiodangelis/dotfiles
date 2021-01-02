@@ -21,3 +21,19 @@ echo "- dotfiles installed"
 # z.sh
 # hstr
 
+# Install custom binaries and script
+echo "installing custom binary and scripts..."
+mkdir -p $BACKUPDIR/bin
+mkdir -p ~/bin
+cd bin
+for f in *
+do
+    if [[ -f ~/bin/$f ]]; then
+        echo "- taking backup of ~/bin/$f"
+        cp -f ~/bin/$f $BACKUPDIR/bin
+    fi
+    echo "- installing ~/bin/$f"
+    cp $f ~/bin/$f
+done
+cd -
+echo "- custom binaries and script installed"
